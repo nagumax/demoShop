@@ -47,25 +47,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.authorizeRequests()
-//                .antMatchers("/users/new").hasAuthority(Role.ADMIN.name())
-//                .anyRequest().permitAll()
-//                .and()
-//                    .formLogin()
-//                    .loginPage("/login")
-//                    .failureUrl("/login-error")
-//                    .loginProcessingUrl("'auth")
-//                    .permitAll()
-//                .and()
-//                    .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                    .logoutSuccessUrl("/").deleteCookies("JSESSIONID")
-//                    .invalidateHttpSession(true)
-//                .and()
-//                    .csrf().disable();
-//    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
